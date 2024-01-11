@@ -1,4 +1,5 @@
   # Run MegaLinter to detect linting and security issues
+
 jobs:  
   - job: MegaLinter
     pool:
@@ -28,3 +29,8 @@ jobs:
         inputs:
           targetPath: "$(System.DefaultWorkingDirectory)/megalinter-reports/"
           artifactName: MegaLinterReport
+      - task: dependency-check-build-task@6
+        inputs:
+          projectName: 'CrafterCMS Website'
+          scanPath: '**'
+          format: 'HTML'
