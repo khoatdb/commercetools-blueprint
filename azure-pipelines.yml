@@ -1,4 +1,5 @@
   # Run MegaLinter to detect linting and security issues
+jobs:  
   - job: MegaLinter
     pool:
       vmImage: ubuntu-latest
