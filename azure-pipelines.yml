@@ -17,7 +17,7 @@ jobs:
             --env-file <(env | grep -e SYSTEM_ -e BUILD_ -e TF_ -e AGENT_ -e) \
             -e SYSTEM_ACCESSTOKEN=$(System.AccessToken) \
             -e GIT_AUTHORIZATION_BEARER=$(System.AccessToken) \
-            -e ENABLE=GROOVY
+            -e ENABLE=GROOVY \
             oxsecurity/megalinter:v7
         displayName: Run MegaLinter
 
