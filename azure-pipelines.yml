@@ -29,9 +29,3 @@ jobs:
         inputs:
           targetPath: "$(System.DefaultWorkingDirectory)/megalinter-reports/"
           artifactName: MegaLinterReport
-      - task: dependency-check-build-task@6
-        inputs:
-          projectName: 'CrafterCMS-Website'
-          scanPath: '**'
-          format: 'HTML'
-          additionalArguments: '--nvdApiKey 375adbcf-03de-4e48-9fff-e710566df507'
